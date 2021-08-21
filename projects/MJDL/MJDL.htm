@@ -1,0 +1,71 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!-- saved from url=(0050)http://hengfan.byethost7.com/project/MJDL/MJDL.htm -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>Robust Visual Tracking with Multitask Joint Dictionary Learning</title></head>
+
+<body class="page page-id-544 page-template page-template-page-templates page-template-template-full-width page-template-page-templatestemplate-full-width-php expound-full-width">
+<div style="width: 1000px; margin-left:auto; margin-right:auto">
+<h1 align="center">Robust Visual Tracking with Multitask Joint Dictionary Learning</h1>
+<p align="center">Heng Fan<sup>1</sup> and Jinhai Xiang<sup>2</sup><br> 
+<sup>1</sup>College of Engineering, Huazhong Agricultural University, Wuhan, China<br>
+<sup>2</sup>College of Informatics, Huazhong Agricultural University, Wuhan, China <br>
+<br>
+</p></div>
+<br>
+<div style="width: 800px; margin-left:auto; margin-right:auto">
+<h2> Abstract </h2>
+      <p align="justify">Dictionary learning for sparse representation has been increasingly applied to object tracking, however the 
+      existing methods only utilize one modality of the object to learn a single dictionary. In this paper, we propose a robust tracking 
+      method based on multitask joint dictionary learning (MJDL). Through extracting different features of the target, multiple linear 
+      sparse representations are obtained. Each sparse representation can be learned by a corresponding dictionary. Instead of separately learning 
+      the multiple dictionaries, we adopt a multitask learning approach to learn the multiple linear sparse representations, which provide 
+      additional useful information to the classification problem. Because different tasks may favor different sparse representation coefficients, 
+      yet the joint sparsity may enforce the robustness in coefficient estimation. During tracking, a classifier is constructed based on a joint 
+      linear representation, and the candidate with the smallest joint decision error is selected to be the tracked object. Figure 1 ilustrates the proposed method.
+      In addition, reliable tracking results and augmented training samples are accumulated into two sets to update the dictionaries for classification, which helps our 
+      tracker adapt to the fast time-varying object appearance. Figure 2 demonstrates the update strategy. Both qualitative and quantitative evaluations on CVPR2013 visual tracking benchmark 
+      demonstrate that our method performs favorably against state-of-the-art trackers.</p>
+<br>
+</div>
+
+<div style="width: 800px; margin-left:auto; margin-right:auto">
+  <img src="./fig1.png" width="800">
+  <p>Figure 1. The proposed tracking method. Firstly we sample the candidates in frame (t+1) within Bayesian framework and then extract multiple features for
+each candidate. After obtaining the features, a classifier based on multitask joint dictionary learning is utilized to compute the joint decision measure of each
+candidate. The candidate with the maximum joint decision measure is selected to be the tracking result.</p>
+<br>
+</div>
+
+<div style="width: 800px; margin-left:auto; margin-right:auto">
+  <img src="./fig2.png" width="800">
+  <p>Figure 2. The illustration of the update process.</p>
+<br>
+</div>
+
+<div style="width: 800px; margin-left:auto; margin-right:auto">
+<h2> Experimental Results </h2>
+<img src="./fig3.png" width="800">
+<p> Figure 3. The precision plots and success plots of OPE for the proposed tracker and the top 10 trackers in benchmark. The performance score
+for each tracker is shown in the legend. The performance score of precession plot is at error threshold of 20 pixels while the performance
+score of success plot is the AUC value. Best viewed on color display.</p>
+<br>
+<img src="./fig4.png" width="800">
+<p> Figure 4. Sampled results of MJDL on the benchmark. For the frame pair of each image sequence, the left shows the first frame with the
+bounding box of the target while the right one shows the beginning frame that suffers from severe drift. If the severe drift does not happen
+in that image sequence, the right one shows the last frame with the tracking result. Best viewed on color and high-resolution display.</p>
+<br>
+</div>
+
+<div style="width: 800px; margin-left:auto; margin-right:auto">
+<h2> Code </h2>
+<p>  Email me for the source code if you are interested.</p>
+<br>
+</div>
+
+<div style="width: 800px; margin-left:auto; margin-right:auto">
+<h2> Citation </h2>
+<p>  Heng Fan and Jinhai Xiang. Robust Visual Tracking with Multitask Joint Dictionary Learning. <i>IEEE Transactions on Circuits and Systems for Video and Technology </i>(<b>TCSVT)</b>, vol. 27, no. 5, pp. 1018-1030, 2017.</p>
+</div>
+<br><br>
+
+</body></html>
